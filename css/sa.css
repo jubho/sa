@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	
+}
+html,body {
+	font-family: 'IBM Plex Sans KR', sans-serif; color:#000000;
+}
+img {
+	max-width:100%; display:block; padding-top:20px;
+}
+a {
+	text-decoration:none;
+	color:#666; display:block;
+	
+}
+a:hover {
+	text-decoration:underline;
+	color:#004f8a;
+}
+#layout {
+	width:1100px;
+	height:1200px;
+	margin:auto; 
+	position:relative;
+}
+/*상단*/
+#header1 {
+	width:100%; display:block; border:none;
+	height:300px; position:absolute; z-index:2;
+	
+}
+header {
+	height:200px; display:flex; 
+}
+/*로고*/
+header>a {
+	text-align:center; margin-bottom:10px;
+	margin-top:50px;
+	
+}
+
+/*상단메뉴*/
+header>nav {
+	flex:1; /*자식입장*/
+	display:flex;
+	align-items:flex-start;
+	margin-top:50px;
+	text-align:center;
+	
+}
+
+
+header>nav>a {flex:1;}
+header div {
+	flex:1; position:relative;
+}
+
+/*메인메뉴*/
+.mainMenu {
+	 color:black; padding:13px 0 15px 0;
+	font-size:1.3rem; font-weight:bold;
+}
+
+/*메인메뉴 마우스대면 서브메뉴 보인다*/
+.mainMenu:hover + .subMenu {
+	/*display:block;   하위메뉴 선택이 안됨(사용불가)*/
+}
+.mainMenu:hover, .mainMenu.active {
+	color:black;
+	text-decoration:none;
+}
+/*서브메뉴*/
+.subMenu {
+	position:absolute; z-index:1;
+	background:white; 
+	box-shadow:0 2px 2px rgba(0,0,0, 0.5);
+	width:100%; padding:10px; padding-bottom:20px;
+	display:none;
+	
+}
+
+.subMenu a {
+	padding:10px;
+}
+
+.subMenu a:hover, .subMenu.active {
+	background:#b8d0e8; color:white;
+	text-decoration:none;
+}
+/*슬라이드*/
+#sliding {
+	
+	height:768px;
+	
+	overflow:hidden;
+	
+}
+#sliding h1 {
+	 display:none;
+}
+/*애니메이션 부분*/
+#sliding div {
+	display:flex; width:3300px;
+	position:relative;/*좌표이동에 필수!*/
+}
+#sliding img {
+	width:1100px; height:768px; margin-top:170px;
+}
+
+/**갤러리**/
+#beha {
+	max-width:1250px; margin:auto;
+	display:flex; flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+#beha section {
+	margin-bottom:10px; position:relative;
+			width:304px; height:304px;
+			overflow:hidden; 
+}
+
+#beha section:hover div {opacity:1; transform:scale(1);}
+
+#beha section img {transition:0.7s;}
+
+#beha section:hover img {transform:scale(1.5);}
+
+
+
+/***********하단************/
+footer { 
+	height:150px; background:#b8d0e8;
+	padding:20px;
+}
+footer ul {
+	display:flex;
+	list-style:none;
+	line-height:180%;
+	margin-top:6px;
+}
+footer li {
+	flex:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
